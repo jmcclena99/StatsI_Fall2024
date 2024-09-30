@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.10)  30 SEP 2024 22:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.9.10)  30 SEP 2024 22:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -903,12 +903,13 @@ File: lstlang3.sty 2024/02/21 1.10 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 86.
- (./PS01.R)
+
+(./PS01_JMcC.R)
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-(./PS01.r
+(./PS01_JMcC.R
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 3
 7.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/base/omlcmr.fd
@@ -929,7 +930,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
-(./PS01.r) [2] (./PS01.R) (./PS01.r)
+(./PS01_JMcC.R) [2] (./PS01_JMcC.R) (./PS01_JMcC.r)
 <plot1.pdf, id=41, 505.89pt x 505.89pt>
 File: plot1.pdf Graphic file (type pdf)
 <use plot1.pdf>
@@ -960,7 +961,7 @@ Overfull \hbox (29.3747pt too wide) in paragraph at lines 139--142
 [] 
  []
 
-[3] [4 <./plot1.pdf>] [5 <./plot2.pdf>] (./PS01.r) [6 <./plot3.pdf>]
+[3] [4 <./plot1.pdf>] [5 <./plot2.pdf>] (./PS01_JMcC.R) [6 <./plot3.pdf>]
 <expenditure_levels_by_region.pdf, id=102, 682.55pt x 448.67625pt>
 File: expenditure_levels_by_region.pdf Graphic file (type pdf)
 <use expenditure_levels_by_region.pdf>
@@ -972,7 +973,7 @@ Overfull \hbox (29.3747pt too wide) in paragraph at lines 151--152
 [][] 
  []
 
-(./PS01.r)
+(./PS01_JMcC.R)
 <plot1_2.pdf, id=103, 505.89pt x 505.89pt>
 File: plot1_2.pdf Graphic file (type pdf)
 <use plot1_2.pdf>
@@ -999,8 +1000,8 @@ Package rerunfilecheck Info: File `PS01.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27286 strings out of 474116
- 475278 string characters out of 5743682
+ 27287 strings out of 474116
+ 475387 string characters out of 5743682
  2059187 words of memory out of 5000000
  49089 multiletter control sequences out of 15000+600000
  568855 words of font info for 81 fonts, out of 8000000 for 9000
