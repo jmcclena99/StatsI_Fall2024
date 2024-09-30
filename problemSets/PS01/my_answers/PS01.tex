@@ -32,6 +32,8 @@
 \usepackage{url}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{graphicx}
+\graphicspath{{}}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -88,11 +90,18 @@ A school counselor was curious about the average of IQ of the students in her sc
 \begin{enumerate}
 	\item Find a 90\% confidence interval for the average student IQ in the school.\\
 	
-	 Sample answer.\\
-
+	\lstinputlisting[language=R, firstline=37, lastline=45]{PS01.r}	
+	
+	I have calculated that the 90\% confidence interval is between 93.95993 and 102.9201.\\
+	
 	\item Next, the school counselor was curious  whether  the average student IQ in her school is higher than the average IQ score (100) among all the schools in the country.\\ 
 	
 	\noindent Using the same sample, conduct the appropriate hypothesis test with $\alpha=0.05$.
+	
+		\lstinputlisting[language=R, firstline=49, lastline=49]{PS01.r}	
+		
+	After running this code, I got a p-value of 0.7215, thereby allowing me to conclude that there is insufficient evidence to reject the null hypothesis.
+
 \end{enumerate}
 
 \newpage
@@ -100,9 +109,6 @@ A school counselor was curious about the average of IQ of the students in her sc
 	\section*{Question 2: Political Economy}
 
 \noindent Researchers are curious about what affects the amount of money communities spend on addressing homelessness. The following variables constitute our data set about social welfare expenditures in the USA. \\
-
-\noindent Researchers are curious about what affects the amount of money communities spend on addressing homelessness. \\
-
 \vspace{.5cm}
 
 
@@ -125,12 +131,35 @@ A school counselor was curious about the average of IQ of the students in her sc
 \item
 Please plot the relationships among \emph{Y}, \emph{X1}, \emph{X2}, and \emph{X3}? What are the correlations among them (you just need to describe the graph and the relationships among them)?
 \vspace{.5cm}
+
+All of these have weak to moderate positive correlations, with Y and X1, and Y and X3 exhibiting the strongest correlations.
+
+\lstinputlisting[language=R, firstline=64, lastline=80]{PS01.r}	
+
+\includegraphics[width=\textwidth]{plot1}
+\includegraphics[width=\textwidth]{plot2}
+\includegraphics[width=\textwidth]{plot3}
+
 \item
 Please plot the relationship between \emph{Y} and \emph{Region}? On average, which region has the highest per capita expenditure on housing assistance?
 \vspace{.5cm}
+
+\lstinputlisting[language=R, firstline=82, lastline=88]{PS01.r}	
+
+It is clear that the West has the highest per capita expenditure on housing assistance. 
+
+\includegraphics[width=\textwidth]{expenditure_levels_by_region}
+
 \item
 Please plot the relationship between \emph{Y} and \emph{X1}? Describe this graph and the relationship. Reproduce the above graph including one more variable \emph{Region} and display different regions with different types of symbols and colors.
 \end{itemize}
+
+There is a weak to moderate positive correlation.
+
+\lstinputlisting[language=R, firstline=83, lastline=93]{PS01.r}	
+
+\includegraphics[width=\textwidth]{plot1_2}
+\includegraphics[width=\textwidth]{expenditure_level_andincome_by_region}
 
 
 \end{document}
