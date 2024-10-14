@@ -1,0 +1,58 @@
+#Name: Jamie McClenaghan
+#Problem Set 2
+#Applied Social Data Science
+library(texreg)
+
+data <- matrix(c(14, 6, 7, 7, 7, 1), nrow = 2, byrow = TRUE)
+
+colnames(data) = c('Not Stopped','Bribe requested','Stopped/given warning')
+rownames(data) <- c('Upper class','Lower class')
+
+final=as.table(data)
+
+final
+
+Upper_class_total <- 14 + 6 + 7
+Lower_class_total <- 7 + 7 + 1
+Grand_total <- Upper_class_total + Lower_class_total 
+
+Not_Stopped_total <- 14 + 7
+Bribe_requested_total <- 6 + 7 
+Stopped_givenwarning_total <- 7 + 1
+
+oneone_o <- 14
+oneone_e <- (Upper_class_total / Grand_total) * Not_Stopped_total
+
+onetwo_o <- 6
+onetwo_e <- (Upper_class_total / Grand_total) * Bribe_requested_total
+
+onethree_o <- 7
+onethree_e <- (Upper_class_total / Grand_total) * Stopped_givenwarning_total
+
+twoone_o <- 7
+twoone_e <- (Lower_class_total / Grand_total) * Not_Stopped_total
+
+twotwo_o <- 7
+twotwo_e <- (Lower_class_total / Grand_total) * Bribe_requested_total
+
+threethree_o <- 1
+threethree_e <- (Lower_class_total / Grand_total) * Stopped_givenwarning_total
+
+X2 <- ((oneone_o - oneone_e)^2 / oneone_e) + ((onetwo_o - onetwo_e)^2 / onetwo_e) + ((onethree_o - onethree_e)^2 / onethree_e) + ((twoone_o - twoone_e)^2 / twoone_e) + ((twotwo_o - twotwo_e)^2 / twotwo_e) + ((threethree_o - threethree_e)^2 / threethree_e) #implementing R code to execute formula for X2
+
+df = (2 - 1) * (3 - 2) #calculating degrees of freedom
+
+pchisq(X2, df = 2, lower.tail=FALSE) #calculating p-value from test statistic
+
+
+
+chi2 <- chisq.test(final) #chi square test with aid of R function
+chi2$residuals #calculating residuals
+
+
+data <- read.csv("https://raw.githubusercontent.com/kosukeimai/qss/master/PREDICTION/women.csv")
+
+reg <- lm(water~reserved,data = data) #bivariate regression
+summary(reg)
+
+texreg(reg) #texreg output to provide latex code for regression table
